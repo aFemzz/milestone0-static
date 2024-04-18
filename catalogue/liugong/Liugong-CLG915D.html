@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liugong CLG915D</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .Liugong-CLG915D {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+
+<section class="navbar">
+
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a href="#" class="navbar-brand"><span class="text-danger font-weight-bold">IRON</span>GIANT</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false"
+                aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+                    <ul class="navbar-nav ms-auto">
+
+                        <li class="nav-item">
+                            <a href="../../dashboard.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../../product.html" class="nav-link">Product</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../../AboutUs.html" class="nav-link">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../../contactUs.html" class="nav-link">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../../portfolio.html" class="nav-link">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../../gallery.html" class="nav-link">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../../login.html" class="nav-link" >Log In / Register</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+</section>
+
+<section class="product-catalogue">
+    <div class="container">
+        <div class="row">
+            <div class="col mt-5 h-100 w-100">
+                <img src="../../assets/liugong_catalogue/excavator/Liugong CLG915D Excavator.png" alt="Komatsu PC2000-11 Hydraulic Excavator" class="Liugong-CLG915D">
+            </div>
+            <div class="col-6 mt-5">
+                <h2 class="fs-1" style="font-weight: 1000;"> LIUGONG   <span class="text-danger">CLG915D</span></h2>
+                <p class="text-start fs-5 ">The Liugong CLG915D is a versatile and reliable wheel loader designed for various applications in construction, mining, and material handling.   </p>
+                <p class="text-start fs-5">It features a powerful engine and advanced hydraulic system, providing excellent performance, efficiency, and durability. With its spacious and comfortable cab, ergonomic controls, and intuitive interface.  </p>
+                <p class="text-start fs-5"> the CLG915D offers operators a productive and comfortable working environment. Its robust construction and innovative design make it suitable for heavy-duty tasks while ensuring ease of maintenance and long-term reliability.</p>
+                <button type="button" class="btn btn-outline-success btn-lg" data-bs-toggle="modal" data-bs-target="#priceModal">View Price</button>
+            </div>
+
+            <div class="container mt-2">
+                <h2 class="fs-1" style="font-weight: 1000;"> SPECIFICATION </h2>
+                <p class="text-start fs-5 mt-3">Operating Weight: Typically ranges from approximately 13,000 kg to 14,000 kg, depending on configuration and options.</p>
+                <p class="text-start fs-5">Engine Power:  Equipped with a powerful diesel engine (specific model and power output may vary).</p>
+                <p class="text-start fs-5"> Bucket Capacity: Varies based on bucket size and configuration, but commonly ranges from 2.0 to 2.5 cubic meters.</p>
+                <p class="text-start fs-5">Transmission: Hydrostatic transmission system for smooth operation and efficient power delivery.
+                <p class="text-start fs-5"> Maximum Speed: Achieves speeds of up to 36 km/h (22 mph) depending on terrain and conditions.
+                <p class="text-start fs-5">Fuel Tank Capacity: Typically equipped with a fuel tank capable of holding around 200 to 250 liters of diesel fuel.</p>
+                <p class="text-start fs-5">Hydraulic System: Advanced hydraulic system with load-sensing technology for precise control and efficient operation.</p>
+                <p class="text-start fs-5">Tires: Equipped with heavy-duty tires suitable for various terrains and conditions.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Modal -->
+<div class="modal fade" id="priceModal" tabindex="-1" aria-labelledby="priceModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="priceModalLabel">Select Lease Duration</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <select class="form-select" id="leaseDuration">
+            <option value="0">Pay Outright</option>
+            <option value="3">3 years</option>
+            <option value="5">5 years</option>
+            <option value="10">10 years</option>
+   
+        </select>
+        <h5 class="mt-3">Final Price: <span id="finalPrice">$</span></h5>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+    // Function to calculate the final price based on lease duration
+    function calculatePrice() {
+        const leaseDuration = parseInt(document.getElementById('leaseDuration').value);
+        let markupPercentage;
+
+        // Assign markup percentage based on lease duration
+        switch (leaseDuration) {
+            case 3:
+                markupPercentage = 5;
+                break;
+            case 5:
+                markupPercentage = 7;
+                break;
+            case 10:
+                markupPercentage = 14;
+                break;
+            default:
+                markupPercentage = 0; 
+        }
+
+        // Calculate final price
+        const originalPrice = 500000000; 
+        const markupAmount = (originalPrice * markupPercentage) / 100;
+        const finalPrice = originalPrice + markupAmount;
+
+        // Update final price in the modal
+        document.getElementById('finalPrice').textContent = `Rp.${finalPrice}`;
+    }
+
+    // Add event listener to the lease duration select element
+    document.getElementById('leaseDuration').addEventListener('change', calculatePrice);
+
+    // Call calculatePrice function initially to display the default price
+    calculatePrice();
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-Kt9CDy1N62vfjZ0lv7dN3jDlQ1eZPugTkLjzKkutFf5M6qzTTHOv2gpf2GpZolrM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<footer class="bg-dark text-white py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h5>Contact Information</h5>
+                <p>Phone: +1-123-456-7890</p>
+                <p>Location: APL Tower, Jl. Letjen S. Parman No.Kav. 28 Lantai 7, Unit T9, Tj. Duren Sel., Kec. Grogol petamburan, Kota Jakarta Barat,</p>
+            </div>
+            <div class="col-md-6">
+                <h5>Connect with Us</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white text-decoration-none">Facebook</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Twitter</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Instagram</a></li>
+                    <!-- Add more socmed links as needed -->
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
